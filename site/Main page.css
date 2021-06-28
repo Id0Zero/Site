@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #000000; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.bg {
+	display: block;
+	width: 100vw;
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.sliding-button {	
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  padding: 15px 30px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image-slice: 1;
+  top: 10%;
+  left: 46%;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 2px;
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  color: white;
+  background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:hover {
+  background: rgba(255, 255, 255, 0);
+}
+.sliding-button:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
